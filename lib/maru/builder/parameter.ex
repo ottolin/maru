@@ -9,7 +9,8 @@ defmodule Parameter.Information do
             type: nil,
             default: nil,
             required: true,
-            children: []
+            children: [],
+            values: []
 end
 
 defmodule Parameter.Runtime do

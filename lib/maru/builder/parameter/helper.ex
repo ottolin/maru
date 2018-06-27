@@ -16,6 +16,7 @@ defmodule Parameter.Helper do
       :type,
       :default,
       :desc,
+      :values,
       :validators
     ]
 
@@ -103,7 +104,7 @@ defmodule Parameter.Helper do
   end
 
   defp do_parse(key, %{options: options, information: info, runtime: runtime})
-       when key in [:required, :default, :desc] do
+       when key in [:required, :default, :desc, :values] do
     {value, options} = Keyword.pop(options, key)
     %{options: options, information: Map.put(info, key, value), runtime: runtime}
   end

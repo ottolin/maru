@@ -9,6 +9,7 @@ defmodule Parameter.Information do
             type: nil,
             default: nil,
             required: true,
+            example: nil,
             children: [],
             values: []
 end
